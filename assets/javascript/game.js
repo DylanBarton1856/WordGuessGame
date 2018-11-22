@@ -60,11 +60,11 @@ var possibilites = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 
             currentWord.splice(i, 1, letterGuess);
             document.getElementById('answer').innerHTML = currentWord;
             }
-
+        }
         if (letterGuess !== answer[i]) {
             userAttempts.push(letterGuess);
-            attemptsLeft--; // fix! each time a letter is incorrect it deducts a value
-            document.getElementById('userGuess').innerHTML = letterGuess;
+            attemptsLeft--; // fix! always deducts.
+            document.getElementById('userGuess').innerHTML = userAttempts;
             document.getElementById('attempts').innerHTML = attemptsLeft;
         }
 
@@ -84,9 +84,9 @@ var possibilites = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 
 //         alert("CORRECT! Try another word");
 //            wins++; 
 //            attempts = 10;
-//            startGame);
+//            startGame();
 //         }
     }
-    }
+    
 
     
